@@ -1,0 +1,12 @@
+/* pages/salerlist/salerlist.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f4f7}
+/*搜索*/  
+.search{flex:auto;display:flex;flex-direction:column;background:#fff; position: fixed;}
+.search-bar{flex:none;display:flex;align-items:center;justify-content:space-between;padding:20rpx 0;background:#0cabfe; position: fixed; left: 0; top: 0; width: 100%; z-index: 99;}
+.search-wrap{position:relative;flex:auto;display:flex;align-items:center;height:80rpx;padding:0 20rpx;background:#fff;border-radius:6rpx; margin-left: 20rpx;}
+.search-wrap .icon-search{margin-right:10rpx}
+.search-wrap .search-input{flex:auto}
+.search-cancel{padding:0 20rpx;color:#fff}
+.saler-list{  padding-top:72px;}
+.saler-item{ height: 2.6em; border-bottom: 1px solid #E1E1E1; background: #fff; padding: 0 0.6em;}

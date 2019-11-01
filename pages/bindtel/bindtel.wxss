@@ -1,0 +1,13 @@
+@import '../../common/css/common.wxss';
+page{ background: #f2f4f7}
+.first-box{ padding: 1em 0.5em 0.6em 0.5em;}
+.second-box{padding: 0 0.5em; }
+.first-main{ background: #fff; border-radius: 8px; }
+.first-item{ padding: 0 0.5em; border-bottom: 1px solid #EFEFEF; height: 2.8em;}
+.put-left{ margin-right: 1em;}
+.find_rightImg image{ width: 0.45em;}
+.btn_box{ padding: 2.5em 1.5em;}
+.main_btn{ background:#028bfd; height: 2.8em; border-radius: 5px; color: #fff; background-size: 100% 100%;}
+
+.bind_warn{ padding:1.5em 0.6em 0.4em 0.6em;}
+.bindwarn_img image{ width: 1.1em; height: 1.1em;}

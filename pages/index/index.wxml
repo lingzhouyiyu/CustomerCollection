@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="um-vp mainpage bc-text">
+	<view class="ub service-top">
+		<view class="ub ftb ub-f1 ub-ac FullName">
+			{{userInfo}}
+		</view>
+		<view class="ub">
+			<view class="ub ub-ac">
+				<img class="ub ub-img code-img" src="../../common/images/code.png" />
+			</view>
+		</view>
+	</view>
+	<view class="ub ub-ac ub-pc navbox">
+		<view class="ub ub-f1 ub-ver main-nav">
+			<view class="ub ub-ac ub-pc">
+				<view class="ub ub-ac ub-pc header_box">
+					<image class="ub ub-img logo_img" src="../../common/images/pheader.png"></image>
+				</view>
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pc ub-ver ub-f1 ub-fh index01" bindtap="gobind">
+					<view class="ub ub-ac">
+						<image class="nav-img" src="../../common/images/service01.png"></image>
+					</view>
+					<view class="ub ft09 ub-ac">
+						绑定
+					</view>
+				</view>
+				<view class="ub ub-ac ub-pc ub-ver ub-f1 ub-fh index02" bindtap="goadd">
+					<view class="ub ub-ac">
+						<image class="nav-img" src="../../common/images/service02.png"></image>
+					</view>
+					<view class="ub ft09 ub-ac">
+						添加
+					</view>
+				</view>
+				<view class="ub ub-ac ub-pc ub-ver ub-f1 ub-fh index03" bindtap="gotask">
+					<view class="ub ub-ac">
+						<image class="nav-img" src="../../common/images/service03.png"></image>
+					</view>
+					<view class="ub ft09 ub-ac">
+						交货单
+					</view>
+				</view>
+				<view class="ub ub-ac ub-pc ub-ver ub-f1 ub-fh index04" bindtap="goprovider">
+					<view class="ub ub-ac">
+						<image class="nav-img" src="../../common/images/service04.png"></image>
+					</view>
+					<view class="ub ft09 ub-ac">
+						客户
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

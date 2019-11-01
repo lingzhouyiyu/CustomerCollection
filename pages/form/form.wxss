@@ -1,0 +1,48 @@
+/* pages/form/form.wxss */
+@import '../../common/css/common.wxss';
+.first-box{ padding: 1em 0.5em 0.6em 0.5em;}
+.second-box{padding: 0 0.5em; }
+.first-main{ background: #fff; border-radius: 8px; }
+.first-item{ padding: 0 0.5em; border-bottom: 1px solid #EFEFEF; height: 2.8em;}
+.put-left{ margin-right: 1em;  float: left;}
+.find_rightImg image{ width: 0.45em;}
+.btn_box{ padding: 2.5em 1.5em;}
+.main_btn{ background:#0cabfe; height: 2.8em; border-radius: 5px; color: #fff; }
+
+.bind_warn{ padding:1.5em 0.6em 0.4em 0.6em;}
+.bindwarn_img image{ width: 1.1em;}
+
+.health-main{ line-height: 24px; margin-bottom: 0.5em;}
+.add-header{ width: 60px; height:60px; font-size: 30px; border: 1px solid #E1E1E1; float: left;}
+.add-header image{ width: 1.2em;}
+.header-main{ padding: 0.6em; background: #fff; border-radius: 5px; }
+.imgShow{ margin-left:10rpx;  width: 100rpx; height:100rpx; font-size: 30px; float: left; margin-bottom: 10rpx;}
+.imgShow image{ width: 100%; height: 100%;}
+.third-main{ margin-bottom: 0.5em;}
+
+.picker{ width: 15em;}
+
+
+.float-left{
+  float: left;
+}
+.viewee{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.child2 {
+   width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  border: 3rpx solid red;
+  position: relative;
+  float: right;
+  margin-left: -13rpx;
+  margin-top: -18rpx;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  text-align:center;
+  color: #FFFBFC;
+}

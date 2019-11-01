@@ -1,0 +1,16 @@
+@import '../../common/css/common.wxss';
+page{ background: #f2f4f7}
+.service-top{background: #1da7fb; padding:1.2em 0; background-size: 100% 100%; }
+.code-img{ width: 1.5em;}
+.service-top{ padding: 2em 0.6em 10em 0.6em; color: #fff;}
+.navbox{ padding: 0 0.5em; margin-top: -5em;}
+.main-nav{ background: #fff; border-radius: 8px; padding:2em 0.5em;  box-shadow:2px 2px 3px #aaaaaa;}
+.nav-img{ width: 3.5em; height: 3.5em;}
+.header_box{border: 2px solid #79dff8; width: 89px; height: 89px;  border-radius: 50%; margin-top: -60px; background: #fff; margin-bottom: 2em;}
+.logo_img{ width: 80px; height: 80px; border-radius: 50%;  }
+
+
+
+
+
+

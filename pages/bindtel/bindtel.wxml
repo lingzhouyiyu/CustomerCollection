@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-ac bind_warn">
+		<view class="ub ub-ac bindwarn_img">
+			<image class="ub ub-img umar-r warm-img" src="../../common/images/warn_img.png"></image>
+		</view>
+		<view class="ub sc-text ft085">请先绑定业务员！</view>
+	</view>
+	<view class="ub first-box">
+		<view class="ub ub-f1 ub-ver first-main">
+			<view class="ub  first-item">
+				<view class="ub ub-ac put-left">
+					手机号
+				</view>
+				<view class="ub ub-ac ub-f1 uinput">
+					<input class="realName" type="tel" placeholder="手机号~"  bindinput="telput" />
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="ub btn_box">
+		<view class="ub ub-f1 ub-ac ub-pc main_btn sendbtn" style="background:#0cabfe;" bindtap="bindAccount">
+			确认绑定
+		</view>
+	</view>
+</view>

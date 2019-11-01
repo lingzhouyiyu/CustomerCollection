@@ -1,0 +1,34 @@
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-f1 search-bar">
+		<view class="ub ub-ac ub-f1 search-wrap">
+			<icon type="ub ub-f1 search" size="16" class="icon-search" />
+			<input type="text" placeholder="编号/名称/助记码" class="ub-f1 search-input" name="searchKeyword" bindinput="bindKeywordInput"
+			 value="{{Keyword}}" />
+		</view>
+		<view class="ub ub-ac search-cancel" bindtap="keywordSearch">搜索</view>
+	</view>
+	<view class="ub ub-ver saler-list">
+		<view class="ub ub-ver saler-item" wx:for="{{contentlist}}" bindtap='checksaler' data-SalerId='{{item.Id}}'>
+			<view class="ub ub-ac umar-b">
+				<view class="ub marr1">
+					{{item.SalerName}}
+				</view>
+				<view class="ub sc-text" wx:if="{{item.LinkTel}}">
+					{{item.LinkTel}}
+				</view>
+			</view>
+			<view class="ub sc-text">{{item.Address}}</view>
+		</view>
+	</view>
+	<!--暂无人员-->
+	<block wx:if="{{hasorder == 0}}">
+		<view class='ub ub-ver ub-ac ub-pc nodata-box'>
+			<view>
+				<image class='nodata-img' src='../../common/images/nodata.png'></image>
+			</view>
+			<view class='ub'>
+				<text>当前暂无终端客户</text>
+			</view>
+		</view>
+	</block>
+</view>

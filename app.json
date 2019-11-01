@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tasklist/tasklist",
+    "pages/form/form",
+    "pages/salerlist/salerlist",
+    "pages/lookmap/lookmap",
+    "pages/bindtel/bindtel",
+    "pages/provider/provider",
+    "pages/custom/custom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "系统将获取你的位置信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

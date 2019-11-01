@@ -1,0 +1,55 @@
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-f1 search-bar">
+		<view class="ub ub-ac ub-f1 search-wrap">
+			<icon type="ub ub-f1 search" size="16" class="icon-search" />
+			<input type="text" placeholder="送达方编号、名称或拼音码" class="ub-f1 search-input" name="searchKeyword" bindinput="bindKeywordInput"
+			 value="{{Keyword}}" />
+		</view>
+		<view class="ub ub-ac search-cancel" bindtap="keywordSearch">搜索</view>
+	</view>
+	<view class="ub ub-ver saler-list">
+		<view class="ub ub ub-ver chartCar-item" wx:for="{{salerlist}}" bindtap='checksaler' data-SalerId='{{item.Id}}' data-SalerName='{{item.Name}}'>
+			<view class="ub ub-ac chartCar-top marb06">
+				<view class="ub ub-ac ub-f1 chartCar-topLeft">
+					<view class="ub ub-ac">
+						<image class="ub ub-img studentimg" src="../../common/images/student.png"></image>
+					</view>
+					<view class="ub ub-ac">{{item.Name}}</view>
+				</view>
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ver ub-f1 chartCar-addrbox">
+					<view class="ub ub-ac marb06">
+						<view class="ub ub-ac">
+							售达方：
+						</view>
+						<view class="ub ub-ac">
+							{{item.SalesmanName}}
+						</view>
+					</view>
+					<view class="ub ub-ac">
+						<view class="ub">监控方式：</view>
+						<view class="ub beginAddr">{{item.MonitorType}}</view>
+					</view>
+					
+				</view>
+				<view class="ub ub-ac ub-pe contral-btn">
+					<view class="ub ub-ac ub-pc pay-btn">
+						查看客户
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!--暂无人员-->
+	<block  wx:if="{{hasorder == 0}}">
+	<view class='ub ub-ver ub-ac ub-pc nodata-box'>
+	  <view>
+	    <image class='nodata-img' src='../../common/images/nodata.png'></image>
+	  </view>
+	  <view class='ub'>
+	    <text>当前暂无送达方</text>
+	  </view>
+	</view>
+	</block>
+</view>

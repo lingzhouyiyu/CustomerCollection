@@ -1,0 +1,17 @@
+/* pages/salerlist/salerlist.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f4f7}
+/*搜索*/  
+.search{flex:auto;display:flex;flex-direction:column;background:#fff; position: fixed;}
+.search-bar{flex:none;display:flex;align-items:center;justify-content:space-between;padding:20rpx 0;background:#0cabfe; position: fixed; left: 0; top: 0; width: 100%; z-index: 99;}
+.search-wrap{position:relative;flex:auto;display:flex;align-items:center;height:80rpx;padding:0 20rpx;background:#fff;border-radius:6rpx; margin-left: 20rpx;}
+.search-wrap .icon-search{margin-right:10rpx}
+.search-wrap .search-input{flex:auto}
+.search-cancel{padding:0 20rpx;color:#fff}
+.saler-list{  padding:72px 0.5em 0.5em 0.5em;}
+
+.chartCar-item{ background: #fff; border-radius: 5px; padding:0.8em 0.5em;  box-shadow:2px 2px 3px #aaaaaa; margin-bottom: 0.8em;}
+.order-bg{ width: 1.4em; margin-right: 0.4em;}
+.pay-btn{ height: 1.8em; border: 1px solid #00CC66; color: #00CC66; padding: 0 0.5em; border-radius: 3px; font-size: 0.9em;}
+.refund-btn{height: 1.8em; border: 1px solid #969696; color: #969696; width: 4.5em; border-radius: 3px; font-size: 0.9em;}
+.studentimg{ width:1.4em; height: 1.4em;}

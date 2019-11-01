@@ -1,0 +1,16 @@
+/* pages/tasklist/tasklist.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f4f7}
+/*搜索*/  
+.search{flex:auto;display:flex;flex-direction:column;background:#fff; position: fixed;}
+.search-bar{flex:none;display:flex;align-items:center;justify-content:space-between;padding:20rpx 0;background:#0cabfe; position: fixed; left: 0; top: 0; width: 100%; z-index: 99;}
+.search-wrap{position:relative;flex:auto;display:flex;align-items:center;height:80rpx;padding:0 20rpx;background:#fff;border-radius:6rpx; margin-left: 20rpx;}
+.search-wrap .icon-search{margin-right:10rpx}
+.search-wrap .search-input{flex:auto}
+.search-cancel{padding:0 20rpx;color:#fff}
+
+.task-list{ padding-top:72px; }
+.task-item{ background: #FFFFFF; padding: 0.6em; margin-bottom: 0.5em;}
+.task-top{ padding: 0.6em; border-bottom: 1px dashed #E1E1E1;}
+.top-bgimg{ width: 1.2em; height: 1.2em;}
+.look-btn{ background: #ff8033; color: #fff; border-radius: 35px; height: 35px; padding: 0 1em;}

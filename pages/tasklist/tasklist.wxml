@@ -1,0 +1,99 @@
+<!--pages/tasklist/tasklist.wxml-->
+<!-- <view class="search">
+	<view class="search-bar">
+		<view class="search-wrap">
+			<icon type="search" size="16" class="icon-search" />
+			<input type="text" placeholder="请输入搜索内容" class="search-input" name="searchKeyword" bindinput="bindKeywordInput"
+			 value="{{searchKeyword}}" />
+		</view>
+		<view class="search-cancel" bindtap="keywordSearch">搜索</view>
+	</view>
+	<view class="search-result">
+		<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower">
+			
+			<view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>
+			<view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+		</scroll-view>
+	</view>
+</view> -->
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-f1 search-bar">
+		<view class="ub ub-ac ub-f1 search-wrap">
+			<icon type="ub ub-f1 search" size="16" class="icon-search" />
+			<input type="text" placeholder="交货单号" class="ub-f1 search-input" name="searchKeyword" bindinput="bindKeywordInput"
+			 value="{{searchKeyword}}" />
+		</view>
+		<view class="ub ub-ac search-cancel" bindtap="keywordSearch">搜索</view>
+	</view>
+	<view class="ub ub-ver task-list">
+		<view class="ub ub-ver task-item" wx:for="{{contentlist}}">
+			<view class="ub task-top">
+				<view class="ub ub-f1">
+					<view class="ub top-bg">
+						<image class="ub top-bgimg" src="../../common/images/order-bg.png"></image>
+					</view>
+					<view class="ub ub-ac umar-l">
+						{{item.DeliveryNo}}
+					</view>
+				</view>
+				<view class="ub ub-ac colhgreen">
+					{{item.DeliveryStatus}}
+				</view>
+			</view>
+			<view class="ub ub-ver task-main">
+				<view class="ub infor-item">
+					<text class="ub">
+						售达方名称：
+					</text>
+					<text class="ub ub-f1">
+						{{item.SalerName}}
+					</text>
+				</view>
+				<view class="ub infor-item">
+					<text class="ub">
+						车牌号：
+					</text>
+					<text class="ub ub-f1">
+						{{item.VehNo}}
+					</text>
+				</view>
+				<view class="ub infor-item">
+					<text class="ub">
+						卸货地址：
+					</text>
+					<text class="ub ub-f1" wx:if="{{item.DeliveryAddress}}">
+						{{item.DeliveryAddress}}
+					</text>
+					<text class="ub ub-f1" wx:else>
+						暂无
+					</text>
+				</view>
+				<view class="ub ub-ac infor-item umar-t">
+					<view class="ub ub-f1">
+						<view class="ub">
+							开始运输时间：
+						</view>
+						<view class="ub ub-f1">
+							{{item.BeginTime}}
+						</view>
+					</view>
+					<view class="ub ub-ac ub-pc look-btn" bindtap='lookmap' data-carno='{{item.VehNo}}' data-starttime='{{item.BeginTime}}' data-endtime='{{item.DeliveryTime}}' data-salecode='{{item.DealerCode}}'>
+						查看轨迹
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	
+	<!--暂无人员-->
+	<block  wx:if="{{hasorder == 0}}">
+	<view class='ub ub-ver ub-ac ub-pc nodata-box'>
+	  <view>
+	    <image class='nodata-img' src='../../common/images/nodata.png'></image>
+	  </view>
+	  <view class='ub'>
+	    <text>当前暂无交货单</text>
+	  </view>
+	</view>
+	</block>
+</view>

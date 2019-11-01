@@ -1,0 +1,82 @@
+.ub{position:relative;display:-webkit-box!important;display:box!important}
+.ub-ac{-webkit-box-align:center;box-align:center}
+.ub-ae{-webkit-box-align:end;box-align:end}
+.ub-pc{-webkit-box-pack:center;box-pack:center}
+.ub-pe{-webkit-box-pack:end;box-pack:end}
+.ub-ver{-webkit-box-orient:vertical;box-orient:vertical}
+.ub-f1{position:relative;-webkit-box-flex:1;box-flex:1}
+.ub-f2{position:relative;-webkit-box-flex:2;box-flex:2}
+.ub-img{-webkit-background-size:contain;background-size:contain;background-repeat:no-repeat;background-position:center}
+.umar-b{margin-bottom:.4em}
+.umar-t{margin-top:.4em}
+.umar-l{margin-left:.4em}
+.umar-r{margin-right:.4em}
+.umar-a{margin:.4em}
+.marl1{margin-left:1em}
+.marr1{margin-right:1em}
+.marb1{margin-bottom:1em}
+.padl1{padding-left:1em}
+.padr1{padding-right:1em}
+.padb1{padding-bottom:1em}
+.padb06{padding-bottom:.6em}
+.marl06{margin-left:.6em}
+.marr06{margin-right:.6em}
+.marb06{margin-bottom:.6em}
+.bc-text{color:#5d5d5d;font-size:16px}
+.sc-text{color:#969696;font-size:16px}
+.uinput input,.uinput textarea{display:block;margin:0;padding:.4em 0;width:100%;height:100%;border:0;background:0 0;text-decoration:none;font-size:1em;line-height:1.2em;-webkit-appearance:none}
+.ft18{font-size:18px}
+.ft14{font-size:14px}
+.ft080{font-size:.8em}
+.ftb{ font-weight: bold;}
+.colgloden{color:#ff8033}
+.colwhite{color:#fff}
+.colhgreen{color:#0c6}
+.colred{color:red}
+.colblue{ color: #0cabfe}
+.dhide{display:none!important}
+.line-bg{margin:0 4px}
+.border-r{ border-right: 1px solid #E1E1E1;}
+.isRuleShow{ display: block;}
+.isRuleHide{ display: none !important;}
+
+.nodata-box{ padding-top: 80px}
+.nodata-img{width: 180px; height: 160px; margin-bottom: 20px }
+
+/* 共享右箭头设置*/
+.righthead:after {
+  content: '';
+  display: inline-block;
+  width: 18rpx;
+  height: 18rpx;
+  border: 3rpx solid #a3a3a3;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  margin-top: -8rpx;
+}
+/* 共享左箭头设置*/
+.lefthead:after {
+  content: '';
+  display: inline-block;
+  width: 18rpx;
+  height: 18rpx;
+  border: 3rpx solid #a3a3a3;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  margin-top: -8rpx;
+}
+/* 共享下箭头设置*/
+
+.bottomhead:after {
+   content: '';
+  display: inline-block;
+  width: 18rpx;
+  height: 18rpx;
+  border: 3rpx solid #a3a3a3;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  margin-top: -10rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+ 
+ <map id="map" scale="15" controls="{{controls}}"  markers="{{markers}}" polyline="{{polyline}}" circles="{{circles}}" include-points="{{polyline[0].points}}" show-location style="width:{{devwidth}}px;height:{{devheight}}px"></map>
+ 

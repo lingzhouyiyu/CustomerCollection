@@ -1,0 +1,298 @@
+<!--pages/form/form.wxml-->
+<view class="ub first-box">
+	<view class="ub ub-f1 ub-ver first-main">
+		<view class="ub  first-item pagebox" id="company">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>送达方名称
+			</view>
+			<view class="ub ub-f1" bindtap='gogetSaler'>
+				<view class="ub ub-ac ub-f1 ub-pe sc-text">
+					{{SalerName}}
+				</view>
+				<view class="ub ub-ac righthead">
+				</view>
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>终端客户名称
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="text" placeholder="终端客户名称" bindinput="DealerName" />
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>联系人姓名
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="text" placeholder="请输入联系人姓名" bindinput="Linkman" />
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>手机号码
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="number" placeholder="请输入手机号码" bindinput="LinkTel" />
+			</view>
+		</view>
+		<view class="ub first-item">
+			<view class="ub ub-ac put-left">
+				主联系人
+			</view>
+			<view class="ub ub-f1">
+				<radio-group class="ub ub-ac ub-f1 radio-group" bindchange="radioChange">
+					<label class="ub ub-ac ub-f1 radio" wx:for="{{items}}">
+						<radio value='{"name":"{{item.name}}","checkval":"{{item.value}}"}' checked="{{item.checked}}" />{{item.value}}
+					</label>
+				</radio-group>
+			</view>
+		</view>
+
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>客户类型
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindClientType" value="{{Clienttxt}}" range="{{ClientType}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-pe" wx:if="{{Clienttxt}}">
+								{{ClientType[Clienttxt]}}
+							</view>
+							<view class="ub ub-f1 ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>经营范围
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindBusinessScope" value="{{BusinessScopetxt}}" range="{{BusinessScope}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{BusinessScopetxt}}">
+								{{BusinessScope[BusinessScopetxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>客户状态
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindClientStatus" value="{{ClientStatustxt}}" range="{{ClientStatus}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{ClientStatustxt}}">
+								{{ClientStatus[ClientStatustxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>合作状态
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindConsortStatus" value="{{ConsortStatustxt}}" range="{{ConsortStatus}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{ConsortStatustxt}}">
+								{{ConsortStatus[ConsortStatustxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>所属部门
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindDepartment" value="{{DepartmentNametxt}}" range="{{DepartmentName}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{DepartmentNametxt}}">
+								{{DepartmentName[DepartmentNametxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>销售区域
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindBusinessArea" value="{{BusinessAreatxt}}" range="{{BusinessArea}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{BusinessAreatxt}}">
+								{{BusinessArea[BusinessAreatxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>销售渠道
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker class="ub ub-f1 ub-pe picker" bindchange="bindSalesChannel" value="{{SalesChanneltxt}}" range="{{SalesChannel}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{SalesChanneltxt}}">
+								{{SalesChannel[SalesChanneltxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>店招
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-pe ub-f1 uinput sc-text companytxt">
+					<picker bindchange="bindShopSign" value="{{ShopSigntxt}}" range="{{ShopSign}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub ub-f1 ub-ac ub-pe" wx:if="{{ShopSigntxt}}">
+								{{ShopSign[ShopSigntxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+		<view class="ub  first-item">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>提货方式
+			</view>
+			<view class="ub ub-f1">
+				<view class="ub ub-ac ub-f1 ub-pe uinput sc-text companytxt">
+					<picker bindchange="bindTakeGoodsType" value="{{TakeGoodsTypetxt}}" range="{{TakeGoodsType}}">
+						<view class="ub ub-f1 ub-pe picker">
+							<view class="ub  ub-ac ub-pe" wx:if="{{TakeGoodsTypetxt}}">
+								{{TakeGoodsType[TakeGoodsTypetxt]}}
+							</view>
+							<view class="ub ub-ac ub-pe" wx:else>
+								请选择
+							</view>
+							<view class="ub ub-ac righthead">
+							</view>
+						</view>
+					</picker>
+				</view>
+				
+			</view>
+		</view>
+
+		<view class="ub  first-item checkstart">
+			<view class="ub ub-ac put-left marr1">
+				<span class="colred">* </span>年需求量（吨）
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="number" placeholder="年需求量（吨）" bindinput="YearDemand" />
+			</view>
+		</view>
+		<view class="ub first-item">
+			<view class="ub ub-ac put-left">
+				<span class="colred">* </span>库存能力
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="text" placeholder="请输入库存能力" bindinput="StorageCapatcity" />
+			</view>
+		</view>
+		<view class="ub first-item">
+			<view class="ub ub-ac put-left">
+				备注
+			</view>
+			<view class="ub ub-ac ub-f1 uinput">
+				<input type="text" placeholder="请输入备注" bindinput="Comment" />
+			</view>
+		</view>
+		<view class="ub second-box">
+			<view class="ub ub-ac header-main">
+				<view class="ub ub-ac put-left">
+					门头照
+				</view>
+				<view class="ub ub-ac ub-pc add-header colblue"  bindtap="chooseImg">
+					<view class="ub ub-ac" for="drivetxt">+</view>
+					<input id="drivetxt" type="file" name="files" accept="image/*,audio/*" style="display: none" />
+				</view>
+				<view class="ub ub-ac ub-pc imgShow" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+				<image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg" style='width:100rpx;height:100rpx;'></image>
+				<view class=" child2" data-index="{{index}}" catchtap="deleteImg">X</view>
+			</view>
+			</view>
+		</view>
+		<view class="ub btn_box">
+			<view class="ub ub-f1 ub-ac ub-pc main_btn sendbtn" bindtap='AdddTerminalCustomer'>
+				确认添加
+			</view>
+		</view>
+	</view>
+</view>
